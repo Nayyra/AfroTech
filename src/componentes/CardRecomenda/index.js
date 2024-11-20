@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { Titulo } from "../Titulo"
+import Button from "../Button"
 
 const Card = styled.div`
     align-items: center;
@@ -11,25 +12,9 @@ const Card = styled.div`
     max-width: 600px;
     padding: 25px 20px;
     justify-content: space-around;
-    width: 100%;  
+    width: 100%;
+    margin-top: 2rem;  
 `
-
-const Botao = styled.button`
-    background-color: #EB9B00;
-    color: #FFF;
-    padding: 10px 0px;
-    font-size: 16px;
-    border: none;
-    font-weight: 900;
-    display: block;
-    text-align: center;
-    width: 150px;
-
-    &:hover {
-        cursor: pointer;
-    }
-`
-
 const Descricao = styled.p`
     max-width: 300px;
 `
@@ -41,21 +26,26 @@ const Subtitulo = styled.h4`
     margin: 15px 0;
 `
 
+const Contribuicao = styled.h5`
+
+`
+
 const ImgLivro = styled.img`
     width: 150px;
 `
 
-function CardRecomenda({titulo, subtitulo, descricao, img}) {
+function CardRecomenda({titulo, subtitulo, descricao, img, contribuicao}) {
     return (
         <Card>
             <div>
-                <Titulo tamanhoFonte="16px" cor="#EB9B00" alinhamento="left">{titulo}</Titulo>
+                <Titulo tamanhoFonte="16px" cor="#ff005b" alinhamento="left">{titulo}</Titulo>
                 <Subtitulo>{subtitulo}</Subtitulo>
+                <Contribuicao>{contribuicao}</Contribuicao>
                 <Descricao>{descricao}</Descricao>
             </div>
             <div>
                 <ImgLivro src={img}/>
-                <Botao>Saiba mais</Botao>
+                <Button />
             </div>
         </Card>  
     )

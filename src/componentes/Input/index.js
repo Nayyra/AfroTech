@@ -16,5 +16,10 @@ const Input = styled.input`
         font-size: 16px;
     }
 `
-
+const SerchPesquisa = styled.div`
+    background-color:#2F4F4F;
+    border:solid 1px;
+    border-radius:15px;
+    width:300px;
+`
 export default Input
