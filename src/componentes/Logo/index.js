@@ -3,11 +3,11 @@ import styled from 'styled-components'
 
 const LogoContainer = styled.div`
     display: flex;
-    font-size: 30px;
+    font-size: 1.875rem;
 `
 
 const LogoImage = styled.img`
-    margin-right: 10px;
+    margin-right: 0.625rem;
 `
 
 function Logo() {
@@ -16,8 +16,8 @@ function Logo() {
             <LogoImage
                 src={logo}
                 alt='logo' 
-                width='90px'
-                height='90px'
+                width='5.625rem'
+                height='5.625rem'
             />
             <p><strong>Afro</strong>
             Tech</p>

@@ -1,25 +1,25 @@
 import styled from "styled-components"
 
 const Input = styled.input`
-    order: 1px solid #FFF;
+    order: 0.063rem solid #FFF;
     background: transparent;
-    border: 1px solid #FFF;
-    padding: 20px 140px;
-    border-radius: 50px;
-    width: 200px;
+    border: 0.063rem solid #FFF;
+    padding: 1.25rem 8.75rem;
+    border-radius: 3.125rem;
+    width: 12.5rem;
     color: #FFF;
-    font-size: 16px;
-    margin-bottom: 30px;
+    font-size: 1rem;
+    margin-bottom: 1.875rem;
 
     &::placeholder {
         color: #FFF;
-        font-size: 16px;
+        font-size: 1rem;
     }
 `
 const SerchPesquisa = styled.div`
     background-color:#2F4F4F;
-    border:solid 1px;
-    border-radius:15px;
-    width:300px;
+    border:solid 0.063;
+    border-radius:  0.938rem;
+    width: 18.75rem;
 `
 export default Input

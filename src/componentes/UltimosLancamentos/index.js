@@ -8,10 +8,22 @@ import styled from 'styled-components'
 
 const UltimosLancamentosContainer = styled.section`
     background-color: #EBECEE;
-    padding-bottom: 20px;
+    padding-bottom: 1.25rem;
     display: flex;
     flex-direction: column;
-`
+
+    @media (max-width: 1284px) and (max-height: 731px) {
+        padding-bottom: 1rem;
+    }
+
+    @media (max-width: 768px) {
+        padding-bottom: 0.75rem;
+    }
+
+    @media (max-width: 480px) {
+        padding-bottom: 0.5rem;
+    }
+`;
 
 const NovosLivrosContainer = styled.div`
     margin-top: 3rem;
@@ -21,15 +33,49 @@ const NovosLivrosContainer = styled.div`
     justify-content: center;
     cursor: pointer;
 
-`
+    @media (max-width: 1284px) and (max-height: 731px) {
+        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    @media (max-width: 768px) {
+        flex-wrap: wrap;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    @media (max-width: 480px) {
+        flex-direction: column;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+`;
 
 const Img = styled.img`
     padding: 1rem;
     background-color: #FFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
     margin: 2.5rem 1rem;
-    border-radius: 10px;
-`
+    border-radius: 0.625rem;
+
+    @media (max-width: 1284px) and (max-height: 731px) {
+        margin: 2rem 0.9rem;
+        padding: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+        margin: 2rem 0.75rem;
+        padding: 0.75rem;
+    }
+
+    @media (max-width: 480px) {
+        margin: 1.5rem 0.5rem;
+        padding: 0.5rem;
+        box-shadow: 0px 0.125rem 0.125rem rgba(0, 0, 0, 0.2);
+    }
+`;
+
+
 function UltimosLancamentos() {
     return (
         <UltimosLancamentosContainer>
@@ -43,8 +89,8 @@ function UltimosLancamentos() {
                 {livros.map( livro => (
                     <Img
                     src={livro.src}
-                    width='190px'
-                    height='250px'
+                    width='170px'
+                    height='230px'
                     />
                 ))}
             </NovosLivrosContainer>
@@ -80,6 +126,7 @@ function UltimosLancamentos() {
                         descricao="Kimberly é uma engenheira elétrica que fundou o Black Girls Code, uma organização que ensina meninas negras a programar.Sua iniciativa tem empoderado jovens de comunidades sub-representadas a entrar no mundo da tecnologia."
                         img={imagemLivro3}
                 />
+
             </containerRecomenda>
         </UltimosLancamentosContainer>
     )
