@@ -24,7 +24,7 @@ function OpcoesHeader() {
             { textoOpcoes.map( (texto) => (
                 <Opcao><p>{texto}</p></Opcao>
             ) ) }
-      </Opcoes>git branch -M main
+      </Opcoes>
     )
 }
 
